@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="row">
+	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+	</div>
+	<div  class="regist col-lg-4 col-md-4 col-sm-4 col-xs-4">
+		<h1 align="center">Регістрація</h1>
+		<form method="POST" >
+		<input type="text" placeholder="Логін:" name="login" class="form-control txt" ng-model="login_value" ng-change="LoginValid()">
+		<i ng-style="changeLogin" ng-bind="login_info"></i> <br>
+		<input type="password" placeholder="Пароль:" name="pass" class="form-control txt" ng-model="pass_value" ng-change="PassValid()">
+		<i ng-style="changePass" ng-bind="pass_info"></i><br>
+		<input type="text" placeholder="Країна:" name="country" class="form-control txt" ng-model="country_value" ng-change="CountryTip()">
+		<i ng-style="changeCountry" ng-bind="country_info"></i><br>
+		<div class="tips">
+			<ul ng-model="countryList" >
+				<li ng-repeat="i in countryList"><a href="" ng-bind="i" ng-click="setValue(i)"></a><hr></li>	
+			</ul>
+		</div><br>
+		<input type="text" placeholder="Місто:" name="city" class="form-control txt" ng-model="city_value" ng-change="CityTip()">
+		<i ng-style="changeCity" ng-bind="city_info"></i><br>
+		<div class="tips">
+			<ul ng-model="cityList" >
+				<li ng-repeat="j in cityList"><a href="" ng-bind="j" ng-click="setCityValue(j)"></a><hr></li>	
+			</ul>
+		</div><br><br>
+		<button ng-click ="setRegData()"  class="butt btn btn-danger ">Регiстрація</button>
+		<i ng-bind="main_info" ng-style="main_style"></i>
+		</form>
+	</div>
+	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+	</div>
+</div>	
+
+
+
+{% endblock %}

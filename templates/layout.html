@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Web Labs</title>
+<meta charset='utf-8'>
+<link rel="stylesheet" type="text/css" href="static/css/style.css">
+<link rel="stylesheet" type="text/css" href="static/css/bootstrap.css">
+<script 
+	src="static/js/angular.js"></script>
+<script src="static/js/mysripts.js">
+
+</script>
+</head>
+<body>
+<div class="upper">
+	<div class="topim row">
+		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+
+		</div>
+		<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+			<form method="POST" action="{{url_for('worker')}}" >
+				<div class="main">
+					<input type="text" class="form-control txt" name="ffield">
+					<button type="submit" class="butt btn btn-danger ">Search</button><br>
+					<a href="#" onclick="changeMode('hid'); return false" >Додаткові параметри пошуку</a>
+					
+				</div>
+				<br>
+				<div class="hidden_field container-fluid" id="hid" style="display:none;">
+					<div class="row">
+						<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+							<lable>За датою</lable><br>
+							<input type="date" name="calendar" class="date">
+						</div>	
+						<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">	
+							<lable>За ціною</lable>	<br>				
+							<lable>Від: </lable><input type="text" name="price_min" class="pr"> <lable>До:</lable> <input type="text" class="pr" name="price_max"><br>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">	
+							<lable>За категорією</lable><br>
+							<input type="checkbox" name="category[]" value="phone"><lable>Смартфон</lable>
+							<input type="checkbox" name="category[]" value="laptop"><lable>Ноутбук</lable><br>
+							<input type="checkbox" name="category[]" value="tablet"><lable>Планшет</lable>
+							<input type="checkbox" name="category[]" value="mp3"><lable>Мп3-плеєр</lable><br>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">	
+							<lable>За описом</lable><br>
+							<textarea name="comment" ></textarea>
+						</div>	
+					</div>
+				</div>
+				
+			</form>
+		</div>
+		<div class="right_menu col-lg-2 col-md-2 col-sm-2 col-xs-2">
+				<a href="{{url_for('registration')}}">Регістрація</a>
+		</div>
+	</div>
+</div>	
+
+<div class="content container" ng-app="MyApp" ng-controller="RegCtrl">
+{%block content%}{%endblock%}
+</div>
+
+<div class="content" align="center" style="font-size:20px;"><hr>Виконав Корнєв Ярослав. 2015 рік</div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+{% block content %}
+{% for i in fieldres %}
+<div class="list container">
+	<div class="row">
+		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+		{% if i[4] == "phone" %}
+		<img src="static/images/smartphone.png" width="120px" height="120px">
+		{% endif %}
+		{% if i[4] == "laptop" %}
+		<img src="static/images/lt.png" width="120px" height="120px">
+		{% endif %}
+		{% if i[4] == "mp3" %}
+		<img src="static/images/mp3.png" width="120px" height="120px">
+		{% endif %}
+		{% if i[4] == "tablet" %}
+		<img src="static/images/tablet.png" width="120px" height="120px">
+		{% endif %}
+		</div>
+		<div class="result col-lg-2 col-md-2 col-sm-2 col-xs-2">
+		<h1>{{i[1]}}</h1>
+		<p>Ціна: {{i[3]}}</p>		
+		</div>
+		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+		<p><i>Дата: {{i[2]}}</i></p>
+		</div>
+		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+		<p><i>Короткий опис:</i></p>
+		<p style="font-size:20px;">{{i[5]}}</p>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+		<p><i>Повний опис:</i></p>
+		<p style="font-size:20px;">{{i[6]}}</p>
+		</div>
+	</div>
+	<hr>
+</div>
+{% endfor %}
+
+{% endblock %}

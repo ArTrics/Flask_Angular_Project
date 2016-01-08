@@ -1,0 +1,103 @@
+
+.topim{
+	background: url('/static/images/back.jpg') no-repeat;
+	background-attachment: fixed;
+	background-size: 100% 80%;
+	
+			
+}
+
+.date{
+	width:50%;
+	height:25px;
+}
+.pr{
+	width:30%;
+	height:25px;
+}
+
+
+.butt{
+	float:right;
+	min-width: 17%;
+}
+.txt{
+	float: left;
+	max-width: 79%;
+}
+.main{
+	height: 60%;
+
+	position: relative;
+	padding-top: 21%;
+	margin-bottom: 4%;
+}
+.main a{
+	float: right;
+	color: white;
+	text-decoration: none;
+}
+.right_menu a{
+	float: right;
+	color: white;
+	text-decoration: none;	
+}
+.hidden_field{
+	margin-bottom: 2%;
+}
+
+.hidden_field lable{	
+	color: white;
+}
+.content{
+	margin-top:5%;
+	font: "Courier New";
+	
+}
+.content p {
+	
+	font-size:25px;
+}
+.content h1 {
+	font-style:bold;
+	
+	font-size:33px;
+}
+.list{
+	font: "Courier New";
+	font-size:25px;
+	height:10%;
+}
+.result h1{
+	font-size: 40px;
+	font-style: bold;
+}
+
+.regist input{
+	margin:3%;
+	min-width: 98%;
+	min-height: 6%;
+	float: left;
+}
+.tips{
+	
+	font: "Courier New";
+	font-size:15px;
+
+	margin-top: 26%;
+	margin-left: 3%;
+	min-width: 98%;
+}
+
+.tips ul{
+	list-style-type: none;
+	padding:0%;
+	margin:0%;
+}
+.tips li{
+	min-height: 4%;
+}
+.tips a{
+	text-decoration: none;
+}
+
